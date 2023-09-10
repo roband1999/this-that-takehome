@@ -15,7 +15,9 @@ export class AppController {
   //Can Have a DTO for Id Param Aswell 
   async updateAccomplaces(@Param('id') id: number, @Body() updateAccomplaces: UpdateAccomplaces) {
     // We are updating relationships
-    // Assumption is relationships aren't always symetrical, so we are specifying unidirectional relationships
+    // Assumptions: 
+    //  - relationships aren't always symetrical, so we are specifying unidirectional relationships
+    //  - The Heros already exist in the database, we aren't creating hero's as we go.
 
     // When number of Accomplaces is not huge (i.e. >100) 
     // we can specify in the body the all of the accomplaces at all times
