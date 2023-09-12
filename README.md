@@ -24,7 +24,7 @@ Take Home Task: https://thisthat.notion.site/Take-Home-Task-76e1b3af48644dc79835
     - Setup controllers for updating Accomplaces with a pattern where we can update and delete relationships seperately.
     - Unit Testing (although controller isnt in scope)
 
-## Frotend Task
+## Frontend Task
 - This can be tested easily with following:
     - `cd super-app && npm install && npm run dev`
     - Visit http://localhost:5173/ in **Chrome** and here you should be able to play with the Marvel Character Address Book™
