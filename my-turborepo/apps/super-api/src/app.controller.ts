@@ -16,7 +16,7 @@ export class AppController {
   async updateAccomplaces(@Param('id') id: number, @Body() updateAccomplaces: UpdateAccomplaces) {
     // We are updating relationships
     // Assumptions: 
-    //  - relationships aren't always symetrical, so we are specifying unidirectional relationships
+    //  - relationships aren't always symmetrical, so we are specifying unidirectional relationships
     //  - The Heros already exist in the database, we aren't creating hero's as we go.
 
     // When number of Accomplaces is not huge (i.e. >100) 
@@ -28,7 +28,7 @@ export class AppController {
     // The POSTGRES Schema would be better generateed via TypeORM Entity
     // We can then access a Repo and make request
 
-    // We'll asume the "Not Huge" case
+    // We'll assume the "Not Huge" case
     // We need to get the Hero's Repository
     // Set the Hero's Accomplaces Field to array passed in the Body
     // The POSTGRES schema will validate the ID's exist due to the RELATIONS command
