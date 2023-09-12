@@ -1,0 +1,39 @@
+.suggestion-drop-down-container {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggestion-input {
+    font-size: 20pt;
+    width: 330px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.suggestion-data-list {
+    display: block;
+    background-color: #686868;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    max-height: 400px;
+    width: 330px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.suggestion-data-list>option {
+    text-overflow: ellipsis;
+    padding: 5px 10px;
+}
+
+.suggestion-data-list>option:hover {
+    background-color: #999999;
+}

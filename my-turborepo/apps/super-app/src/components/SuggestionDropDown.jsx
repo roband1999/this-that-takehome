@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { ApiContext } from "../context/ApiContext";
 
+import './SuggestionDropDown.css';
+
 export default function SuggestionDropDown() {
     const api = useContext(ApiContext);
 
@@ -30,24 +32,28 @@ export default function SuggestionDropDown() {
     }, [input])
 
     return (
-        <>
+        <div className="suggestion-drop-down-container">
             <input
-                placeholder="Search your hero"
+                className="suggestion-input"
+                placeholder="Search your hero..."
                 onChange={(e) => setInput(e.target.value)}
             />
-            <datalist style={{ display: 'block' }}>
-                {
-                    suggested.length > 0 && suggested.map((element) => (
-                        <option
-                            key={element.id}
-                            value={element.name}
-                        >
-                            {element.name}
-                        </option>
-                    ))
-                }
-            </datalist>
-        </>
+            {suggested.length > 0 &&
+                <datalist className="suggestion-data-list">
+                    {
+                        suggested.map((element) => (
+                            <option
+                                key={element.id}
+                                value={element.name}
+                                onClick={() => alert(element.name)}
+                            >
+                                {element.name}
+                            </option>
+                        ))
+                    }
+                </datalist>
+            }
+        </div>
     )
 
 }

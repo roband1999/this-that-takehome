@@ -7,9 +7,12 @@ import SuggestionDropDown from './components/SuggestionDropDown'
 function App() {
 
   return (
-    <ApiProvider>
-      <SuggestionDropDown />
-    </ApiProvider>
+    <>
+      <h1>MARVEL EMERGENCY CONTACTS</h1>
+      <ApiProvider>
+        <SuggestionDropDown />
+      </ApiProvider>
+    </>
   )
 }
 
