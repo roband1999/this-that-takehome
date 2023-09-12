@@ -6,16 +6,16 @@ class Character {
         return new Promise((resolve, reject) => {
             Axios.get('characters', {
                 params: {
-                    ...Axios.defaults.params,
                     nameStartsWith: nameStartsWith,
-                    orderBy: name,
+                    orderBy: 'name',
+                    ...Axios.defaults.params
                 }
             })
                 .then((res) => {
-                    resolve(res.data);
+                    resolve(res.data.data);
                 })
                 .catch((err) => {
-                    reject(res.data);
+                    reject(err.data);
                 });
         });
     }

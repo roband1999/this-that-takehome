@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import Api from "@/controllers/api";
+import Api from "../controllers/api";
 
 const ApiContext = createContext(undefined);
 
